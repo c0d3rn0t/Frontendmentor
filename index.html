@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body class="">
+    <div class="container">
+      <header class="header">
+        <h1>TODO</h1>
+        <button class="bg-toggle"></button>
+      </header>
+      <section class="todo">
+        <form class="todo__form">
+          <input type="checkbox" disabled />
+          <input
+            type="text"
+            id="todo__form--add"
+            placeholder="Create a new todo..."
+          />
+        </form>
+        <ul class="todo__list">
+          <!--sample todo-->
+          <!-- <li class="todo__list--item">
+            <div>
+              <input type="checkbox" />
+              <p>Sample todo</p>
+            </div>
+            <button><img src="images/icon-cross.svg" alt="" /></button>
+          </li> -->
+        </ul>
+        <div class="todo__other">
+          <div class="todo__other--total">
+            <span class="todo__other--total__num"></span>
+            <p>items left</p>
+          </div>
+          <div class="todo__other--btns">
+            <button class="todo__other--btns__all">All</button>
+            <button class="todo__other--btns__active">Active</button>
+            <button class="todo__other--btns__completed">Completed</button>
+          </div>
+          <button class="todo__other--clear">Clear Completed</button>
+        </div>
+      </section>
+      <div class="hint">
+        <p>Drag and drop to reorder list</p>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a
+          style="padding-left: 5px"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a style="padding-left: 5px" href="#">@c0d3rn0t</a>.
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
+      integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
