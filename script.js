@@ -73,7 +73,7 @@
           <li class="todo__list--item" id="${todo.id}" draggable="true" >
           <div>
             <input type="checkbox" ${todo.completed ? 'checked' : ''} />
-            <p>${todo.title}</p>
+            <p>${sanitize(todo.title)}</p>
           </div>
           <button class="delBtn" ><img src="images/icon-cross.svg" alt="" /></button>
         </li>
@@ -152,6 +152,12 @@
       state = { ...storageItems };
     }
     renderTodos();
+  };
+
+  const sanitize = (input) => {
+    const div = document.createElement('div');
+    div.textContent = input;
+    return div.innerHTML;
   };
 
   renderTodos();
